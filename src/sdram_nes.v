@@ -27,7 +27,7 @@ module sdram_nes #(
     parameter [4:0]   T_RCD= 4'd2,     // 15ns, active to r/w
     parameter [4:0]   T_RC = 4'd6      // 63ns, ref/active to ref/active
 ) (    
-	inout  reg [SDRAM_DATA_WIDTH-1:0] SDRAM_DQ,   // 16 bit bidirectional data bus
+	inout  wire [SDRAM_DATA_WIDTH-1:0] SDRAM_DQ,   // 16 bit bidirectional data bus
 	output     [SDRAM_ROW_WIDTH-1:0] SDRAM_A,    // 13 bit multiplexed address bus
 	output reg [SDRAM_DATA_WIDTH/8-1:0] SDRAM_DQM,  // two byte masks
 	output reg [1:0]  SDRAM_BA,   // two banks
