@@ -925,7 +925,6 @@ assign flags_out_b  = enable ? flags_out : 16'hZ;
 assign audio_b      = enable ? {1'b0, audio_in[15:1]} : 16'hZ;
 
 wire [21:0] prg_aout, chr_aout;
-wire prg_allow;
 wire chr_allow;
 reg vram_a10;
 reg [7:0] chr_dout;
